@@ -1,0 +1,272 @@
+
+
+
+
+/* Animações definidas */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Outros estilos */
+body {
+    margin: 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+    background-image: url(./assets/depositphotos_218044296-stock-photo-background-purple-painted-wooden-boards.jpg);
+    background-size: cover;
+    color: aliceblue;
+    max-width: 1200px;
+    font-family: "Poppins", sans-serif;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.title {
+    flex-direction: column;
+    line-height: 10px;
+    text-align: center;
+    margin-top: 30px;
+    animation: slideIn 2s ease-in-out;
+}
+
+.title img {
+    height: 95px;
+    width: 130px;
+    margin-right: 140px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+a:hover {
+    color: rgb(132, 14, 201);
+    text-decoration: none;
+    transition: 0.5s all;
+    animation: pulse 0.5s ease-in-out;
+}
+
+.contato {
+    border: 2px solid rgb(154, 81, 197);
+    padding: 10px;
+    border-radius: 15px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.contato:hover {
+    color: aliceblue;
+    background-color: rgb(132, 14, 201);
+    transition: 0.5s all;
+    animation: pulse 0.5s ease-in-out;
+}
+
+li {
+    display: inline-block;
+    margin: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h2 {
+    font-size: 1.8em;
+    line-height: 0.5em;
+    margin-top: 0px;
+    color: rgb(231, 134, 235);
+    animation: fadeIn 2s ease-in-out;
+}
+
+span {
+    color: rgb(231, 134, 235);
+}
+
+p {
+    line-height: 1em;
+    max-width: 410px;
+    text-align: justify;
+    animation: fadeIn 2s ease-in-out;
+}
+
+img {
+    width: 470px;
+    max-width: 580px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 94%;
+    animation: fadeIn 2s ease-in-out;
+}
+
+form [type="submit"] {
+    margin-top: 20px;
+    height: 50%;
+    width: 50%;
+    margin-left: 25%;
+    background-color: rgb(117, 68, 148);
+    color: aliceblue;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    animation: fadeIn 2s ease-in-out;
+}
+
+form [type="submit"]:hover {
+    background-color: rgba(155, 130, 170, 0.444);
+    transition: 0.5s all;
+    animation: pulse 0.5s ease-in-out;
+}
+
+input {
+    margin-top: 20px;
+    height: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animação para as imagens */
+.animated-image {
+    transition: transform 0.5s;
+}
+
+.animated-image:hover {
+    animation: pulse 0.5s ease-in-out;
+}
+
+.clickable-image {
+    cursor: pointer;
+}
+
+.grow {
+    animation: grow 0.5s forwards;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        max-width: 100%;
+    }
+    
+    header {
+        flex-direction: column;
+    }
+    
+    .title img {
+        margin-right: 0;
+    }
+    
+    ul {
+        padding: 0;
+        text-align: center;
+    }
+    
+    li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    form [type="submit"] {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+    
+    .title {
+        margin-top: 20px;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    p {
+        max-width: 100%;
+        text-align: justify;
+    }
+    
+    input {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
